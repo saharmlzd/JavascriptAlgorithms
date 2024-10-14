@@ -3,7 +3,8 @@ function findFirstNonRepeatingCharacter(str) {
 
   const charCount = {};
 
-  for (let char of str) {
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
     if (charCount[char]) {
       charCount[char]++;
     } else {
@@ -11,7 +12,8 @@ function findFirstNonRepeatingCharacter(str) {
     }
   }
 
-  for (let char of str) {
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
     if (charCount[char] === 1) {
       return char;
     }
